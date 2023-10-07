@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="storage/css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="storage/js/index.js"></script>
+    <script>
+      let inFrame
+      try {
+          inFrame = window !== top
+      } catch (e) {
+          inFrame = true
+      }
+      if (!inFrame && !navigator.userAgent.includes("Firefox")) {
+          const popup = open("about:blank", "_blank")
+          if (!popup || popup.closed) {
+              alert("please allow popups and redirects")
+              location.replace("https://classroom.google.com")
+          } else {
+              popup.close()
+              aeae(location.href)
+              location.replace("https://classroom.google.com")
+          }
+      }
+    </script>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="centered-text">
+          <h1>unnamed games</h1>
+          <button onclick="aeae((window.location.href + 'games.html'))">games</button>
+          <button onclick="aeae((window.location.href + 'apps.html'))">apps</button>
+          <button onclick="aeae('https://ugprxy.hop.sh/uv/service/hvtrs8%2F-e%2Cwkdeevbmt%2Cim%2Fahcnlens-1353806636624481335-13538066379%3A4407248')">chat</button>
+          <button onclick="aeae('https://forms.gle/jjm9wrGZvTpiJMh27')">request a game</button>
+        </div>
+      </div>
+    </header>
+    <footer>
+      <div>
+        <a href="https://0midnite.com" target="_blank">visit the creator</a>
+      </div>
+      <hr style="width: 135px;">
+      © 2023 0Midnite
+    </footer>
+  </body>
+</html>
