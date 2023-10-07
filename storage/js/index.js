@@ -2,7 +2,7 @@ function openit(url) {
     const blanked = window.open('about:blank', '_blank');
     if (blanked) {
         const iframe = document.createElement('iframe');
-        iframe.src = (window.location.origin + "/storage/" + url + "/index.html");
+        iframe.src = (window.location.origin + "/storage/games/" + url + "/index.html");
         iframe.style = "position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;";
         blanked.document.body.appendChild(iframe);
     }
