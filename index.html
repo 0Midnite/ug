@@ -15,11 +15,11 @@
           const popup = open("about:blank", "_blank")
           if (!popup || popup.closed) {
               alert("please allow popups and redirects")
-              location.replace("https://classroom.google.com")
+              location.reload()
           } else {
               popup.close()
               aeae(location.href)
-              location.replace("https://classroom.google.com")
+              location.replace("https://google.com")
           }
       }
     </script>

@@ -8,6 +8,8 @@ function openit(url) {
     }
 }
 
+// -------------------------
+
 function aeae(url) {
     const blanked = window.open('about:blank', '_blank');
     if (blanked) {
@@ -18,12 +20,16 @@ function aeae(url) {
     }
 }
 
-/*
-const script = document.createElement('script');
-script.src = "//pl20682025.highcpmrevenuegate.com/5e/2c/c0/5e2cc0ecd870e74151f1770e2c518631.js";
-iframe.onload = function () {
-    const iframeDocument = iframe.contentDocument || iframe.contentWindow.document;
-    const head = iframeDocument.head || iframeDocument.getElementsByTagName('head')[0];
-    head.appendChild(script);
-};
-*/
+// -------------------------
+
+function ischrome() {
+    var userAgent = navigator.userAgent.toLowerCase();
+    return userAgent.indexOf('chrome') > -1;
+}
+function chrome() {
+    if (!ischrome()) {
+        alert("this site only works on chrome")
+        window.location.href = 'https://google.com/chrome';
+    }
+}
+window.onload = chrome;
