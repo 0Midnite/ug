@@ -21,12 +21,3 @@ function chrome() {
     }
 }
 window.onload = chrome;
-
-// -------------------------
-
-document.addEventListener("mousedown", function() {
-    const randomNum = Math.floor(Math.random() * 5) + 1;
-    if (randomNum === 1) {
-        window.open("https://www.highcpmrevenuegate.com/fag308325?key=a721cfba016e5a75613331ef54a856f3", "_blank");
-    }
-});
