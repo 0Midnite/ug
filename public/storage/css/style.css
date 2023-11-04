@@ -19,6 +19,17 @@ button {
 button:hover {
     background: #1f1f1f;
 }
+.withthumb {
+    border-radius: 7px;
+    font-size: 8px;
+    border: none;
+    background-color: transparent;
+    color: #fff;
+    transition: background-color 0.3s ease;
+}
+.withthumb:hover {
+    background-color: #0f0f0f;
+}
 a {
     color: #f0f0f0;
     transition: color 0.3s ease;
@@ -28,8 +39,10 @@ a:hover {
     color: #d0d0d0;
 }
 .thumb {
-    width: auto;
+    width: 125px;
     height: 125px;
+    border-radius: 7px;
+    background-color: #1f1f1f;
 }
 footer {
     position: fixed;
