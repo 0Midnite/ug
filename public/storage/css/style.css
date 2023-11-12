@@ -64,3 +64,15 @@ footer {
     transform: translate(-50%, -50%);
     text-align: center;
 }
+input {
+    border-radius: 7px;
+    font-size: 17px;
+    border: none;
+    padding: 10px 20px;
+    background-color: #0f0f0f;
+    color: #fff;
+    transition: background-color 0.3s ease;
+}
+input:hover {
+    background: #1f1f1f;
+}

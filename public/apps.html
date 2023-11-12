@@ -8,8 +8,12 @@
   <body>
     <header>
       <div class="container">
+        <form>
+          <input class="search-input" placeholder="browse the web freely">
+        </form>
         <a href="/~/hvtrs8%2F-nmw%2Cge%2Frlcy-ulcwbg%2F5054-nmw"><button class="withthumb"><img class="thumb" src="storage/images/androidos.png" loading="lazy"><br><p>android os</p></button></a>
         <a href="/~/hvtrs8%2F-nmw%2Cge%2Frlcy-artmife-1642%2Fcpvokdg"><button class="withthumb"><img class="thumb" src="storage/images/aptoide.png" loading="lazy"><br><p>aptoide</p></button></a>
+        <a href="/~/hvtrs8%2F-grt%2C021002.perl%2Ccm%2Fahct-"><button class="withthumb"><img class="thumb" src="storage/images/chatgpt.png" loading="lazy"><br><p>chatgpt</p></button></a>
         <a href="/~/hvtrs8%2F-wuw%2Cgmoelg.aoo"><button class="withthumb"><img class="thumb" src="storage/images/google.webp" loading="lazy"><br><p>google</p></button></a>
         <!--<a href="/~/hvtrs8%2F-nmweg%2Csjuvtnefet.perl%2Ccm%2Fqw%2Chvmn"><button class="withthumb"><img class="thumb" src="storage/images/nowgg.png" loading="lazy"><br><p>now.gg</p></button></a>-->
         <a href="/~/hvtrs8%2F-mmvke%2Fwgb%2Carp-sgapcj%2Footig"><button class="withthumb"><img class="thumb" src="storage/images/movieweb.png" loading="lazy"><br><p>movie-web</p></button></a>
@@ -21,5 +25,30 @@
     <footer>
       © 2023 0Midnite
     </footer>
+    <script src="uv/uv.bundle.js"></script>
+    <script src="uv/uv.config.js"></script>
+    <script>
+      const form = document.querySelector('form');
+      const input = document.querySelector('input');
+
+      form.addEventListener('submit', async event => {
+          event.preventDefault();
+          window.navigator.serviceWorker.register('./sw.js', {
+              scope: __uv$config.prefix
+          }).then(() => {
+              let url = input.value.trim();
+              if (!isUrl(url)) url = 'https://www.google.com/search?q=' + url;
+              else if (!(url.startsWith('https://') || url.startsWith('http://'))) url = 'http://' + url;
+
+
+              window.location.href = __uv$config.prefix + __uv$config.encodeUrl(url);
+          });
+      });
+
+      function isUrl(val = ''){
+          if (/^http(s?):\/\//.test(val) || val.includes('.') && val.substr(0, 1) !== ' ') return true;
+          return false;
+      };
+    </script>
   </body>
 </html>
