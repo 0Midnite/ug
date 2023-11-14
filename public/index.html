@@ -39,13 +39,6 @@
         </div>
       </div>
     </header>
-    <footer>
-      <div>
-        <a href="https://0midnite.com" target="_blank">my website</a>
-      </div>
-      <hr style="width: 135px;">
-      © 2023 0Midnite
-    </footer>
     <script>
       const splashes = [
           "0midnite.com",
@@ -56,6 +49,15 @@
       const splash = document.getElementById("splash");
       const random = Math.floor(Math.random() * splashes.length);
       splash.innerHTML = splashes[random];
+    </script>
+    <script src='https://storage.ko-fi.com/cdn/scripts/overlay-widget.js'></script>
+    <script>
+      kofiWidgetOverlay.draw('0midnite', {
+        'type': 'floating-chat',
+        'floating-chat.donateButton.text': 'Donate',
+        'floating-chat.donateButton.background-color': '#323842',
+        'floating-chat.donateButton.text-color': '#fff'
+      });
     </script>
   </body>
 </html>
